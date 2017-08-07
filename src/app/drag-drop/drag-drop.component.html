@@ -1,0 +1,18 @@
+
+<h2>Let's here the list items: </h2>
+<ul>
+        <li style="width: 150px; height: 50px; background-color: #4FD6FF; margin: 10px; text-align: center"
+            *ngFor="let item of itemsToDrop; let i = index" 
+            draggable
+            [dragData]="item"
+            (onDrag)="onItemDrag($event, i)"
+            [dragScope]="'scope1'"
+            droppable
+            (onDrop)="onItemDrop($event, i)"
+            [dropScope]="'scope1'"> 
+                {{item.label}}
+        </li>
+</ul>
+<br/>
+<h2>Let's here the component items: </h2>
+<div #container></div>

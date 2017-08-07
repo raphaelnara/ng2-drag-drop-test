@@ -1,0 +1,11 @@
+<div  draggable
+            [dragData]="this"
+            (onDrag)="onDrag($event)"
+            [dragScope]="'scope'"
+            droppable
+            (onDrop)="onDrop($event)"
+            [dropScope]="'scope'"
+            style="margin: 10px; width: 300px; height: 50px; background-color: yellow; border-color: black; border: 16px;">
+              {{message}} <br/>
+              ma oeeeeeeeeee!
+          </div>
